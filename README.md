@@ -7,12 +7,18 @@
 
 ## NER
  Implementation of a system for Named-Entity Recognition
- For each word, I used four features:
-  * word: The target word.
-  * pos: The pos tag of target word.
-  * isCapital: 1 if the target word starts with capital letter. otherwise 0.
-  * lowercased_word: The target word in lowercase.
- Then I used a MaxentClassifier from nltk.
+ For each word, I extracted four features. Then I used a MaxentClassifier from nltk. 
+ 
+ Features I used included:
+  - word: The target word.
+  - pos: The pos tag of target word.
+  - isCapital: 1 if the target word starts with capital letter. otherwise 0.
+  - lowercased_word: The target word in lowercase.
+  
+ Evaluation:
+  - Exact Match: detected entity has correct type and boundary
+  - Boundry Match: detected entity has correct type but wrong boundary
+  - Type Match: detected entity has correct boundary but wrong type
 
 ## Uses
  - [Numpy](http://www.numpy.org/) version 1.14.5
@@ -24,7 +30,7 @@
  - `ner.py` will implement and evaluate a maxEnt based named-entity recognition
 
 ## POS Output
- - Average Confusion Matrix as .csv file
+ - Average Confusion Matrix as `Average_Confusion.csv` file
  - Test Accurecy
 
 ## NER Output
