@@ -2,14 +2,18 @@
  Implementation of a system for Named-Entity Recognition, POS Tagging.
 
 ## POS
- Implementation of a system for POS Tagging
- At first, we should split our train and test data into sentences then sentences' words to tuples (word, pos). In training step, I used Hidden Markov Model from nltk. We can use test tuples to evaluate our tagger.
+ Implementation of a system for POS Tagging.
+ 
+ At first, we should split our train and test data into sentences. Then each sentences words to tuples (word, pos). 
+ 
+ In training step, I used Hidden Markov Model from nltk. We can use test tuples to evaluate our tagger.
 
 ## NER
- Implementation of a system for Named-Entity Recognition
+ Implementation of a system for Named-Entity Recognition.
+ 
  For each word, I extracted four features. Then I used a MaxentClassifier from nltk. 
  
- Features I used included:
+ Features I used:
   - word: The target word.
   - pos: The pos tag of target word.
   - isCapital: 1 if the target word starts with capital letter. otherwise 0.
